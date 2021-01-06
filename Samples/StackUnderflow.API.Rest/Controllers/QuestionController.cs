@@ -34,8 +34,8 @@ namespace StackUnderflow.API.Rest.Controllers
             _client = client;
         }
 
-        [HttpPost("tenant")]
-        public async Task<IActionResult> CreateTenantAsyncAndInviteAdmin([FromBody] CreateTenantCmd createTenantCmd)
+        [HttpPost("question")]
+        public async Task<IActionResult> CreateQuestion([FromBody] CreateTenantCmd createTenantCmd)
         {
             var tenantExists = _dbContext.Tenant.Where(t => t.OrganisationId == createTenantCmd.OrganisationId).FirstOrDefault();
 
